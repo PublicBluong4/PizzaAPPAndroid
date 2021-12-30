@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Bluong4_Project2V4.PizzaDetailPage"
+             Title="Pizza Detail">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" 
+            iOS="0, 20, 0, 0" Default="10,40,10,10"
+            Android="0, 0, 0, 0" />
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#A1EB5E28">
+            <Grid Margin="10,0,10,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Frame Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" CornerRadius="15"
+                   Padding="0" Margin="15,0,15,0" BackgroundColor="#003049">
+                    <Label Text=" Favourite &#10;Pizza" TextColor="#FCBF49"
+                   HorizontalTextAlignment="Center"
+                   FontSize="24" Margin="10,10,10,10"
+                    FontAttributes="Bold,Italic" BackgroundColor="Transparent"/>
+                </Frame>
+
+                <Frame Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3"
+                       Padding="0" Margin="15,0,15,0" CornerRadius="15">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Row="0" Grid.Column="0" Text="ID: " FontAttributes="Bold" Margin="10,0,10,0" HeightRequest="50" HorizontalOptions="Center" TextColor="Black" FontSize="20" ></Label>
+                        <Entry x:Name="txtPizzaID" Text="{Binding ID}" Style="{StaticResource editEntry}" Grid.Row="0" Grid.Column="1" Margin="10,0,10,0" HeightRequest="50" HorizontalOptions="Center" TextColor="Black" WidthRequest="150"></Entry>
+
+                        <Label Grid.Row="1" Grid.Column="0" Text="Name: " FontAttributes="Bold" Margin="10,0,10,0" HeightRequest="50" HorizontalOptions="Center" TextColor="Black" FontSize="20"></Label>
+                        <Entry x:Name="txtPizzaName" Text="{Binding Name}" Style="{StaticResource editEntry}" Grid.Row="1" Grid.Column="1" Margin="10,0,10,0" HeightRequest="50" HorizontalOptions="Center" TextColor="Black" WidthRequest="150"></Entry>
+
+                        <Label Grid.Row="2" Grid.Column="0" Text="Desc: " FontAttributes="Bold" Margin="10,0,10,0" HeightRequest="50" HorizontalOptions="Center" TextColor="Black" FontSize="20"></Label>
+                        <Entry x:Name="txtPizzaDescription" Text="{Binding Description}" Style="{StaticResource editEntry}" Grid.Row="2" Grid.Column="1" Margin="10,0,10,0" HeightRequest="50" HorizontalOptions="Center" TextColor="Black" WidthRequest="150"></Entry>
+
+                        <Label Grid.Row="3" Grid.Column="0" Text="Price: " FontAttributes="Bold" Margin="10,0,10,0" HeightRequest="50" HorizontalOptions="Center" TextColor="Black" FontSize="20"></Label>
+                        <Entry x:Name="txtPizzaPrice" Text="{Binding Price}" Style="{StaticResource editEntry}" Grid.Row="3" Grid.Column="1" Margin="10,0,10,0" HeightRequest="50" HorizontalOptions="Center" TextColor="Black" WidthRequest="150"></Entry>
+
+                        <Label Grid.Row="4" Grid.Column="0" Text="Type: " FontAttributes="Bold" Margin="10,0,10,0" HeightRequest="50" HorizontalOptions="Center" TextColor="Black" FontSize="20"></Label>
+                        <Picker x:Name="ddlPizzaTypes" Title="Pizza Type" class="PizzaType" Style="{StaticResource editEntry}" VerticalOptions="Center" Grid.Row="4" Grid.Column="1" WidthRequest="150"
+                                Grid.ColumnSpan="2" ItemDisplayBinding="{Binding Type}">
+                            
+                        </Picker>
+                    </Grid>
+                    
+                </Frame>
+
+                <StackLayout Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3"
+                       Padding="0" Margin="15,0,15,0">
+                    <Button Text="Save" Clicked="SaveClicked" Style="{StaticResource CityListButton}" HeightRequest="40" CornerRadius="15"/>
+                    <Button Text="Cancel" Clicked="CancelClicked" Style="{StaticResource CityListButton}" HeightRequest="40" CornerRadius="15"/>
+                    <Button x:Name="btnDelete" Text="Delete" Clicked="DeleteClicked" Style="{StaticResource CityListButton}" HeightRequest="40" CornerRadius="15"/>
+                </StackLayout>
+
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

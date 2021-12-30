@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Bluong4_Project2V4.AdvertisementPage"
+             Title="Advertisement Page">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" 
+            iOS="0, 20, 0, 0" Default="10,40,10,10"
+            Android="0, 0, 0, 0" />
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#A1EB5E28">
+            <Grid Margin="10,0,10,10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+
+                <Frame Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" CornerRadius="15"
+                   Padding="0" Margin="15,0,15,0" BackgroundColor="#003049">
+                    <Label Text=" Favourite &#10;Pizza" TextColor="#FCBF49"
+                   HorizontalTextAlignment="Center"
+                   FontSize="24" Margin="10,10,10,10"
+                    FontAttributes="Bold,Italic" BackgroundColor="Transparent"/>
+                </Frame>
+                <Frame Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" CornerRadius="15"
+                       Padding="0" Margin="15,10,15,10"
+                       HeightRequest="380" BackgroundColor="Transparent">
+                    <Image x:Name="imageSlide" Source="Pizza1.png"/>
+
+                </Frame>
+
+
+
+                <StackLayout Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="3"
+                       Padding="0" Margin="15,0,15,0" HorizontalOptions="Center">
+                    <StackLayout Orientation="Horizontal">
+                        <Button Text="Start" x:Name="btnStartTimer" Clicked="btnStartTimer_Clicked" Style="{StaticResource CityListButton}" HeightRequest="40"/>
+                        <Button Text="Stop" x:Name="btnStopTimer" Clicked="btnStopTimer_Clicked" Style="{StaticResource CityListButton}" HeightRequest="40"/>
+                    </StackLayout>
+                    <StackLayout>
+                        <Button Text="Back" x:Name="btnBack" Clicked="btnBack_Clicked" Style="{StaticResource CityListButton}" HeightRequest="40"/>
+                    </StackLayout>
+                    
+                    
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

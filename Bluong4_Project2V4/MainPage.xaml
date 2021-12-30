@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Bluong4_Project2V4.MainPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Pizza Order App"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" 
+            iOS="0, 20, 0, 0" Default="10,40,10,10"
+            Android="0, 0, 0, 0" />
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#A1EB5E28">
+            <Grid Margin="10,0,10,10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Frame Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" CornerRadius="15"
+                   Padding="0" Margin="15,0,15,0" BackgroundColor="#003049">
+                    <Label Text=" Favourite &#10;Pizza" TextColor="#FCBF49"
+                   HorizontalTextAlignment="Center"
+                   FontSize="24" Margin="10,10,10,10"
+                    FontAttributes="Bold,Italic" BackgroundColor="Transparent"/>
+                </Frame>
+                <Frame BackgroundColor="Transparent" Grid.Row="4" Grid.Column="0"
+                   Grid.ColumnSpan="3" HeightRequest="50">
+
+                </Frame>
+                <Frame Grid.Row="5" Grid.Column="0"
+                   Padding="0"
+                   CornerRadius="15"
+                   Margin="10,10,10,10"
+                   BackgroundColor="Transparent"
+                   BorderColor="#7F000000" CascadeInputTransparent="False">
+                    <ImageButton Source="menu.png"      
+                         HeightRequest="70"
+                         BackgroundColor="Transparent"
+                         x:Name="btnMenu"
+                                 Clicked="btnMenu_Clicked"/>
+                </Frame>
+                <Label Text="Menu" Grid.Row="6" Grid.Column="0" HorizontalTextAlignment="Center"></Label>
+                <Frame Grid.Row="5" Grid.Column="1"
+                   Padding="0"
+                   CornerRadius="15"
+                   Margin="10,10,10,10"
+                   BackgroundColor="Transparent"
+                   BorderColor="#7F000000" CascadeInputTransparent="False">
+                    <ImageButton Source="reservations.png"
+                         HeightRequest="70"
+                         BackgroundColor="Transparent"
+                             x:Name="btnReservations"
+                                 Clicked="btnReservations_Clicked"/>
+                </Frame>
+                <Label Text="reservations" Grid.Row="6" Grid.Column="1" HorizontalTextAlignment="Center"></Label>
+                <Frame Grid.Row="5" Grid.Column="2"
+                   Padding="0"
+                   CornerRadius="15"
+                   Margin="10,10,10,10"
+                   BackgroundColor="Transparent"
+                   BorderColor="#7F000000" CascadeInputTransparent="False">
+                    <ImageButton Source="order.png"
+                         HeightRequest="70"
+                         BackgroundColor="Transparent"
+                         x:Name="btnOrder"
+                         Clicked="btnOrder_Clicked"/>
+                </Frame>
+                <Label Text="Order" Grid.Row="6" Grid.Column="2" HorizontalTextAlignment="Center"></Label>
+                <Frame Grid.Row="7" Grid.Column="0"
+                   Padding="0"
+                   CornerRadius="15"
+                   Margin="10,10,10,10"
+                   BackgroundColor="Transparent"
+                   BorderColor="#7F000000" CascadeInputTransparent="False">
+                    <ImageButton Source="slideshow.png"
+                         HeightRequest="70"
+                         BackgroundColor="Transparent"
+                         x:Name="btnAdvertise"
+                                 Clicked="btnAdvertise_Clicked"/>
+                </Frame>
+                <Label Text="Advertisement" Grid.Row="8" Grid.Column="0" HorizontalTextAlignment="Center"></Label>
+                <Frame Grid.Row="7" Grid.Column="1"
+                   Padding="0"
+                   CornerRadius="15"
+                   Margin="10,10,10,10"
+                   BackgroundColor="Transparent"
+                   BorderColor="#7F000000" CascadeInputTransparent="False">
+                    <ImageButton Source="setWallpaper.png"
+                         HeightRequest="70"
+                         BackgroundColor="Transparent"
+                         x:Name="btnWallpaper"
+                         Clicked="btnWallpaper_Clicked" />
+                </Frame>
+
+                <Label Text="Wallpaper" Grid.Row="8" Grid.Column="1" HorizontalTextAlignment="Center"></Label>
+                <Frame Grid.Row="7" Grid.Column="2"
+                   Padding="0"
+                   CornerRadius="15"
+                   Margin="10,10,10,10"
+                   BackgroundColor="Transparent"
+                   BorderColor="#7F000000" CascadeInputTransparent="False">
+                    <ImageButton Source="equipment.png"
+                         HeightRequest="70"
+                         BackgroundColor="Transparent"
+                         x:Name="btnMobile"
+                         Clicked="btnMobile_Clicked"/>
+                </Frame>
+                <Label Text="my Mobile" Grid.Row="8" Grid.Column="2" HorizontalTextAlignment="Center"></Label>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+
+    
+
+</ContentPage>

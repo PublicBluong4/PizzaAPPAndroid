@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Bluong4_Project2V4.OrderPage"
+             Title="Order Page">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" 
+            iOS="0, 20, 0, 0" Default="10,40,10,10"
+            Android="0, 0, 0, 0" />
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#A1EB5E28">
+            <Grid Margin="10,0,10,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+
+                <Frame Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" CornerRadius="15"
+                   Padding="0" Margin="15,0,15,0" BackgroundColor="#003049">
+                    <Label Text=" Favourite &#10;Pizza" TextColor="#FCBF49"
+                   HorizontalTextAlignment="Center"
+                   FontSize="24" Margin="10,10,10,10"
+                    FontAttributes="Bold,Italic" BackgroundColor="Transparent"/>
+                </Frame>
+
+                <Frame Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" CornerRadius="15"
+                       Padding="0" Margin="15,0,15,0">
+                    <Picker x:Name="ddlPizzaTypes" Title="Choose Pizza Type" class="PizzaType" Style="{StaticResource editEntry}"
+                         HorizontalOptions="Center" SelectedIndexChanged="ddlPizzaTypes_SelectedIndexChanged" WidthRequest="200">
+                    </Picker>
+                </Frame>
+                <Frame Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" CornerRadius="15"
+                       Padding="0" Margin="15,0,15,0">
+                    <Picker x:Name="ddlPizzas" Title="Choose a Pizza" class="Pizza" Style="{StaticResource editEntry}"
+                         HorizontalOptions="Center" SelectedIndexChanged="ddlPizzas_SelectedIndexChanged" WidthRequest="200">
+                    </Picker>
+                </Frame>
+                <StackLayout Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3"
+                       Padding="0" Margin="15,0,15,0" HorizontalOptions="StartAndExpand" WidthRequest="500">
+                    <Label Text="Price" Margin="10,0,10,0" HeightRequest="20" HorizontalOptions="Center" TextColor="Black"></Label>
+                    <Label Text="" x:Name="lblPrice" Margin="10,0,10,0" HeightRequest="20" HorizontalOptions="Center" TextColor="Blue"></Label>
+                    <Label Text="How many Pizza do you want?" Margin="10,0,10,0" HeightRequest="20" HorizontalOptions="Center" TextColor="Black"/>
+                    <Entry x:Name="txtAmount" Margin="10,0,10,0" HeightRequest="50" HorizontalOptions="Center" TextColor="Blue" WidthRequest="200" FontSize="20"
+                           HorizontalTextAlignment="Center"></Entry>
+                    <Label Text="Total before Tax:" Margin="10,0,10,0" HeightRequest="20" HorizontalOptions="Center" TextColor="Black"/>
+                    <Label x:Name="lblTotalBeforeTax" Margin="10,0,10,0" HeightRequest="20" HorizontalOptions="Center" TextColor="Blue"></Label>
+                    <Label Text="Total After Tax" Margin="10,0,10,0" HeightRequest="20" HorizontalOptions="Center" TextColor="Black"></Label>
+                    <Label x:Name="lblTotalAfterTax" Margin="10,0,10,0" HeightRequest="20" HorizontalOptions="Center" TextColor="Blue"></Label>
+                    <Label Text="System Ready" x:Name="lblmessage" Margin="10,0,10,0" HeightRequest="20" HorizontalOptions="Center" TextColor="Red"></Label>
+                </StackLayout>
+                <StackLayout Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="3"
+                       Padding="0" Margin="15,0,15,0" HorizontalOptions="Center" WidthRequest="500">
+                    <Button Text="Order" x:Name="btnOrder" Clicked="btnOrder_Clicked" Style="{StaticResource CityListButton}" HeightRequest="40" CornerRadius="15"/>
+                    <Button Text="Clear" x:Name="btnclear" Clicked="btnclear_Clicked" Style="{StaticResource CityListButton}" HeightRequest="40" CornerRadius="15"/>
+                    <Button Text="Back" x:Name="btnBack" Clicked="btnBack_Clicked" Style="{StaticResource CityListButton}" HeightRequest="40" CornerRadius="15"/>
+
+                </StackLayout>
+                
+
+                
+
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
